@@ -8,7 +8,7 @@ using namespace ariel;
 
     
 
-    TEST_CASE("Distance method") {
+    TEST_CASE("Distance check") {
     Point p1{1, 1};
     Point p2{5, 5};
     Point p3{-2, -2};
