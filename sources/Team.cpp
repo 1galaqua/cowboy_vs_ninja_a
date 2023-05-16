@@ -76,7 +76,7 @@ using namespace ariel;
     
 
 
-    // Team class implementation
+    /////////////////////////////////// Team class implementation
     Team::Team(Character* leader) { members.push_back(leader); }
     Team::~Team() {
         for (Character* member : members) {
@@ -96,4 +96,21 @@ int Team::stillAlive() const {
 void Team::print() const {
     
 }
-    
+////////////////////////////team2/////////////////////////
+Team2::Team2(Character* leader):Team(leader) { members.push_back(leader); }
+
+Team2::~Team2() {
+    for (Character* member : members) {
+            delete member;
+        }
+    }
+
+
+///////////////////////////////////SmartTeam/////////////////////////////////////
+SmartTeam::SmartTeam(Character* leader):Team(leader){ members.push_back(leader); }
+
+SmartTeam::~SmartTeam() {
+    for (Character* member : members) {
+            delete member;
+        }
+    }

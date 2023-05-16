@@ -110,12 +110,30 @@ using namespace std;
         Team(Character* leader);
         ~Team();
         void add(Character* member);
-        void attack(Team* other);
-        int stillAlive() const;
-        void print() const;
-    private:
+        virtual void attack(Team* other);
+        virtual int stillAlive() const;
+        virtual void print() const;
+    protected:
         std::vector<Character*> members;
     };
+
+    class Team2 : public Team{
+        Team2(Character* leader);
+        ~Team2();
+        virtual void attack(Team* other) override{};
+        virtual int stillAlive() const override{return 1;}
+        virtual void print() const override{};
+    };
+
+    class SmartTeam : Team{
+        SmartTeam(Character* leader);
+        ~SmartTeam();
+        virtual void attack(Team* other) override{};
+        virtual int stillAlive() const override{return 1;}
+        virtual void print() const override{};
+    };
+
+
 
 }
 
