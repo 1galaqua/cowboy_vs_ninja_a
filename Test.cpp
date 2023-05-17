@@ -26,7 +26,7 @@ using namespace ariel;
 
 TEST_CASE("Cowboy initialization") {
     Cowboy cowboy{"jhonny", Point{5, 5}};
-    CHECK(cowboy.hasboolet());
+    CHECK(cowboy.hasboolets());
     CHECK_EQ(cowboy.getName(), "jhonny");
     CHECK_EQ(cowboy.getLocation().distance(Point{5, 5}), 0);
     CHECK_NE(cowboy.getLocation().distance(Point{1, 6}), 0);
@@ -41,7 +41,7 @@ TEST_CASE("TrainedNinja initialization") {
 }
 TEST_CASE("OldNinja initialization") {
     OldNinja old{"splinter", Point{5, 5}};
-    
+    double dis=old.distance(old);
     CHECK_EQ(old.getName(), "splinter");
     CHECK_EQ(old.getLocation().distance(Point{5, 5}), 0);
     CHECK_NE(old.getLocation().distance(Point{1, 5}), 0);
